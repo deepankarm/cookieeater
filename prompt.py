@@ -38,8 +38,6 @@ def interact(filepath: str):
                 if value:
                     # convert 'list' to list, 'str' to str
                     field_type = getattr(builtins, field['type'])
-                    # if field_type is list:
-                    #     value = value.split(',')
 
                     if not isinstance(value, field_type):
                         # Validate value datatype
@@ -48,7 +46,6 @@ def interact(filepath: str):
                         # Valudate list of choices
                         print(f'`{value}` not in allowed list')
                     else:
-                        print(field['name'] + value)
                         rendered_context_vars[field['name']] = value
                         break
                 elif field['default']:
