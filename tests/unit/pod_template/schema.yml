@@ -1,0 +1,71 @@
+project_dir: "{{executor_name.replace(' ', '_').replace('-', '_')}}"
+fields:
+  - name: executor_name
+    help: Class name of the Executor (UpperCamelCase)
+    default: MyAwesomeExecutor
+    type: str
+
+  - name: kind
+    help: Kind of Executor
+    default: null
+    type: str
+    allowed:
+      - Encoder
+      - Crafter
+      - Indexer
+      - Ranker
+      - Evaluator
+      - Segmenter
+      - Classifier
+
+  - name: description
+    help: Describe what the executor does
+    default: null
+    type: str
+
+  - name: keywords
+    help: Keywords to describe the executor, separated by commas
+    default:
+      - jina
+    type: list
+
+  - name: pip_requirements
+    help: Pip requirements in a list
+    default:
+      - jina
+    type: list
+
+  - name: base_image
+    help: Docker base image for the Executor
+    default: jinaai/jina
+    type: str
+
+  - name: author_name
+    help: Name of the author
+    default: Jina AI Dev-Team (dev-team@jina.ai)
+    type: str
+
+  - name: author_url
+    help: Official URL of the author
+    default: https://jina.ai
+    type: str
+
+  - name: author_vendor
+    help: Vendor for the Executor
+    default: Jina AI Limited
+    type: str
+
+  - name: docs_url
+    help: Documentation link to readme.md
+    default: https://github.com/jina-ai/jina-hub
+    type: str
+
+  - name: version
+    help: Semantic version of the Executor
+    default: 0.0.1
+    type: str
+
+  - name: license
+    help: License
+    default: apache-2.0
+    type: str

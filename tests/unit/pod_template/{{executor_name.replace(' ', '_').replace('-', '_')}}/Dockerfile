@@ -1,4 +1,4 @@
-FROM jinaai/hub
+FROM {{ base_image }}
 
 # setup the workspace
 COPY . /workspace

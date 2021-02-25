@@ -1,0 +1,14 @@
+manifest_version: 1
+name: {{ executor_name}}
+kind: {{ kind | lower }}
+description:
+  |
+  {{ description | replace('\n', ' ') }}
+author: {{ author_name }}
+url: {{ author_url }}
+vendor: {{ author_vendor }}
+documentation: {{ docs_url }}
+version: {{ version }}
+license: {{ license }}
+keywords: {{ keywords }}
+type: pod
